@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var Araba = ["BMW","Mercedes","Audi","Volkswagen"]
+        
+        var i=0;
+
+            for(var i=0;i<=10;i++){
+                if(i==6){
+                    break;
+                }
+                else{
+                    document.write("<br>"+i);
+                }
+            }
+            
+        i=0;
+
+            while(i<=10){
+
+                if(i==3){
+                    i++;
+                continue;
+                
+            }
+            else{
+                document.write("<br>"+i);
+
+                i++;
+                }
+            }
+
+            i=0;
+            do{
+                document.write("<br>"+i);
+                i++;
+            }while(i<=10)
+
+            for(i in Araba){
+                document.write("<br>"+Araba[i]);
+            }
+            function checkmail(){
+                var mail = document.getElementById("mail").value;
+                if(mail.indexOf("@") == -1){    
+                    alert("Mail adresinizde @ işareti bulunmamaktadır.");
+                }
+                else{
+                    alert("Mail adresiniz geçerlidir.");
+                }
+            }
+
+
+
+    </script>
+</head>
+<body>
+    <br>
+    <input type="text" size="30" id="mail" onchange="checkmail()">
+    
+</body>
+</html>
